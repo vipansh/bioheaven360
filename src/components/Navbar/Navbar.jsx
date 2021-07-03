@@ -1,150 +1,95 @@
 import React from "react";
-import "./navbar.css";
-const Navbar = () => {
+
+export default function Navbar({ fixed }) {
+  const [navbarOpen, setNavbarOpen] = React.useState(false);
   return (
-    <header className="text-gray-600 body-font border-t-4 border-blue-700">
-      <nav className="fixed bottom-0 left-0 md:hidden border-2 rounded-md w-full ">
-        <div className="px-7 bg-white shadow-lg rounded-2xl">
-          <div className="flex">
-            <div className="flex-1 group">
-              <a
-                href="/"
-                className="flex items-end justify-center text-center mx-auto px-4 pt-2 w-full text-gray-400 group-hover:text-indigo-500"
-              >
-                <span className="block px-1 pt-1 pb-1">
-                  <i className="far fa-home text-2xl pt-1 mb-1 block"></i>
-                  <span className="block text-xs pb-2">Home</span>
-                  <span className="block w-5 mx-auto h-1 group-hover:bg-indigo-500 rounded-full"></span>
-                </span>
-              </a>
-            </div>
-            <div className="flex-1 group">
-              <a
-                href="/"
-                className="flex items-end justify-center text-center mx-auto px-4 pt-2 w-full text-gray-400 group-hover:text-indigo-500"
-              >
-                <span className="block px-1 pt-1 pb-1">
-                  <i className="far fa-compass text-2xl pt-1 mb-1 block"></i>
-                  <span className="block text-xs pb-2">Explore</span>
-                  <span className="block w-5 mx-auto h-1 group-hover:bg-indigo-500 rounded-full"></span>
-                </span>
-              </a>
-            </div>
-            <div className="flex-1 group">
-              <a
-                href="/"
-                className="flex items-end justify-center text-center mx-auto px-4 pt-2 w-full text-gray-400 group-hover:text-indigo-500"
-              >
-                <span className="block px-1 pt-1 pb-1">
-                  <i className="far fa-search text-2xl pt-1 mb-1 block"></i>
-                  <span className="block text-xs pb-2">Search</span>
-                  <span className="block w-5 mx-auto h-1 group-hover:bg-indigo-500 rounded-full"></span>
-                </span>
-              </a>
-            </div>
-            <div className="flex-1 group">
-              <a
-                href="/"
-                className="flex items-end justify-center text-center mx-auto px-4 pt-2 w-full text-gray-400 group-hover:text-indigo-500"
-              >
-                <span className="block px-1 pt-1 pb-1">
-                  <i className="far fa-cog text-2xl pt-1 mb-1 block"></i>
-                  <span className="block text-xs pb-2">Settings</span>
-                  <span className="block w-5 mx-auto h-1 group-hover:bg-indigo-500 rounded-full"></span>
-                </span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </nav>
-      {/* for big screen */}
-      <nav className=" items-center justify-between flex-wrap  py-4 lg:px-12  border-solid  hidden md:flex container mx-auto">
-        <div className="flex justify-between lg:w-auto w-full lg:border-b-0 pl-6 pr-2 border-solid border-b-2 border-gray-300 pb-5 lg:pb-0">
-          <div className="flex items-center flex-shrink-0 text-gray-800 mr-16">
-            <span className="font-semibold text-xl tracking-tight">
-              My Navbar
-            </span>
-          </div>
-          <div className="block lg:hidden ">
+    <>
+      <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-blueGray-500 mb-3">
+        <div className="container px-4 mx-auto flex flex-wrap items-center justify-between  relative ease-linear transition-all duration-150">
+          <div className="w-full  flex justify-between lg:w-auto lg:static lg:block lg:justify-start" >
+            <a
+              className="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-gray-700"
+              href="#pablo"
+            >
+              BioHeaven360
+            </a>
             <button
-              id="nav"
-              className="flex items-center px-3 py-2 border-2 rounded text-blue-700 border-blue-700 hover:text-blue-700 hover:border-blue-700"
+              className="text-gray-800 cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+              type="button"
+              onClick={() => setNavbarOpen(!navbarOpen)}
             >
-              <svg
-                className="fill-current h-3 w-3"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <title>Menu</title>
-                <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-              </svg>
+              {navbarOpen ? (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              ) : (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+              )}
             </button>
           </div>
-        </div>
-
-        <div className="menu w-full lg:block flex-grow lg:flex lg:items-center lg:w-auto lg:px-3 px-8">
-          <div className="text-md font-bold text-blue-700 lg:flex-grow">
-            <a
-              href="#responsive-header"
-              className="block mt-4 lg:inline-block lg:mt-0 hover:text-white px-4 py-2 rounded hover:bg-blue-700 mr-2"
-            >
-              Menu 1
-            </a>
-            <a
-              href="#responsive-header"
-              className=" block mt-4 lg:inline-block lg:mt-0 hover:text-white px-4 py-2 rounded hover:bg-blue-700 mr-2"
-            >
-              Menu 2
-            </a>
-            <a
-              href="#responsive-header"
-              className="block mt-4 lg:inline-block lg:mt-0 hover:text-white px-4 py-2 rounded hover:bg-blue-700 mr-2"
-            >
-              Menu 3
-            </a>
-          </div>
-          <div className="relative mx-auto text-gray-600 lg:block hidden">
-            <input
-              className="border-2 border-gray-300 bg-white h-10 pl-2 pr-8 rounded-lg text-sm focus:outline-none"
-              type="search"
-              name="search"
-              placeholder="Search"
-            />
-            <button type="submit" className="absolute right-0 top-0 mt-3 mr-2">
-              <svg
-                className="text-gray-600 h-4 w-4 fill-current"
-                xmlns="http://www.w3.org/2000/svg"
-                version="1.1"
-                id="Capa_1"
-                x="0px"
-                y="0px"
-                viewBox="0 0 56.966 56.966"
-                width="512px"
-                height="512px"
-              >
-                <path d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z" />
-              </svg>
-            </button>
-          </div>
-          <div className="flex ">
-            <a
-              href="/"
-              className="block text-md px-4 py-2 rounded text-blue-700 ml-2 font-bold hover:text-white mt-4 hover:bg-blue-700 lg:mt-0"
-            >
-              Sign in
-            </a>
-
-            <a
-              href="/"
-              className=" block text-md px-4  ml-2 py-2 rounded text-blue-700 font-bold hover:text-white mt-4 hover:bg-blue-700 lg:mt-0"
-            >
-              login
-            </a>
+          <div
+            className={
+              "lg:flex flex-grow items-center  z-10" +
+              (navbarOpen ? " flex" : " opacity-0")
+            }
+            id="example-navbar-danger"
+          >
+            <ul className=" flex flex-col lg:flex-row list-none lg:ml-auto">
+              <li className="nav-item">
+                <a
+                  className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-gray-800 hover:opacity-75"
+                  href="#pablo"
+                >
+                  <i className="fab fa-facebook-square text-lg leading-lg text-gray-800 opacity-75"></i>
+                  <span className="ml-2">Share</span>
+                </a>
+              </li>
+              <li className="nav-item">
+                <a
+                  className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-gray-800 hover:opacity-75"
+                  href="#pablo"
+                >
+                  <i className="fab fa-twitter text-lg leading-lg text-gray-800 opacity-75"></i>
+                  <span className="ml-2">Tweet</span>
+                </a>
+              </li>
+              <li className="nav-item">
+                <a
+                  className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-gray-800 hover:opacity-75"
+                  href="#pablo"
+                >
+                  <i className="fab fa-pinterest text-lg leading-lg text-gray-800 opacity-75"></i>
+                  <span className="ml-2">Pin</span>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </nav>
-    </header>
+    </>
   );
-};
-
-export default Navbar;
+}

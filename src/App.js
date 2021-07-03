@@ -11,6 +11,8 @@ import ContactUs from "./components/mainSection/ContactUs";
 import Footer from "./components/mainSection/Footer";
 import Vajra from "./components/mainSection/Vajra";
 import BigData from "./components/mainSection/BigData";
+import AboutUs from "./components/mainSection/AboutUs";
+import Profile from "./components/mainSection/Profile";
 
 function App() {
 
@@ -27,6 +29,8 @@ function App() {
     >
       <Navbar />
       <Hero />
+      <AboutUs/>
+      <Profile/>
       <AiAssisted />
       <NewsAndEvent />
       <VisionAndMission />

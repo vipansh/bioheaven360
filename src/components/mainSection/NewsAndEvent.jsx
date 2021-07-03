@@ -2,6 +2,9 @@ import React from "react";
 import TitleBar from "../TitleBar";
 
 const NewsAndEvent = () => {
+
+  
+
   return (
     <section class="text-gray-600 body-font bg-gray-50 border-t-2">
       <div class="container px-5 py-24 mx-auto">

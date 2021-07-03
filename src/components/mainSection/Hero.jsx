@@ -1,43 +1,33 @@
 import React from "react";
 const Hero = () => {
   return (
-    <div class="md:p-20 p-4 relative 	bg-gradient-to-r from-gray-600 to-gray-900 ">
-      <div className="flex justify-between container mx-auto"> 
-        <div className=" ">
-          <div
-            class=" md:px-6 md:max-w-2xl px-2 "
-            data-aos="fade-up"
-            data-aos-anchor-placement="center-bottom"
-            data-aos-delay="500"
-            data-aos-offset="0"
-          >
-            <h2 class="text-4xl font-bold mb-2 text-white">
-              Data driven Risk Prediction
-            </h2>
-            <h3 class="text-2xl mb-8 text-gray-200">
-              <p className="text-3xl">
-                Bioheaven is revolutionising the data driven risk prediction for
-                diseases.
-              </p>
-              <p>
-                We build the AI-powered Genomics Diagnostics tools to provide
-                early diagnosis or risk predictions of diseases, providing
-                timely intervention and the opportunity to prevent the disease.
-              </p>
-            </h3>
-            <button class="bg-white font-bold rounded-full py-4 px-8 shadow-lg uppercase tracking-wider">
-              Any Button
-            </button>
-          </div>
+    <section class="text-gray-600 body-font">
+      <div class="container mx-auto flex px-5  md:flex-row flex-col items-center">
+        <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+          <img
+            class="object-cover object-center rounded"
+            src={process.env.PUBLIC_URL + "./assets/bioheaven.png"}
+            alt="bioheaven360"
+          />
         </div>
-        <div data-aos="fade-up"
-            data-aos-anchor-placement="center-bottom"
-            data-aos-delay="500"
-            data-aos-offset="0">
-          <img src={process.env.PUBLIC_URL + './assets/bioheaven.png'} alt="bioheaven360" />
+        <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+          <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
+            Data driven Risk Prediction
+          </h1>
+          <h3 class="text-2xl mb-8 text-gray-800">
+            <p className="text-3xl">
+              Bioheaven is revolutionising the data driven risk prediction for
+              diseases.
+            </p>
+            <p>
+              We build the AI-powered Genomics Diagnostics tools to provide
+              early diagnosis or risk predictions of diseases, providing timely
+              intervention and the opportunity to prevent the disease.
+            </p>
+          </h3>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
