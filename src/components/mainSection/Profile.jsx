@@ -63,8 +63,8 @@ const Profile = () => {
             <span
               className={
                 openTab === 1
-                  ? "py-3 px-3 sm:px-6 sm:py-6 text-center border-2-r border-2-l border-gray-200 flex flex-row flex-1  items-center justify-center  cursor-pointer  bg-gray-200 border-l-2 border-r-2 border-t-2 border-gray-300 rounded-t gray text-gray-800"
-                  : "py-3 px-3 sm:px-6 sm:py-6 text-center border-2-r border-2-l border-gray-200 flex flex-row flex-1  items-center justify-center  cursor-pointer  text-gray-600"
+                  ? "py-3 px-3 sm:px-6 sm:py-6 text-center border-2-r border-2-l border-gray-200 flex flex-row flex-1  items-center justify-center  cursor-pointer  bg-gray-200 border-l-2 border-r-2 border-t-2  rounded-t gray text-gray-800 font-bold"
+                  : "py-3 px-3 sm:px-6 sm:py-6 text-center border-2-r border-2-l border-gray-200 flex flex-row flex-1  items-center justify-center  cursor-pointer  text-gray-600 font-semibold"
               }
               onClick={(e) => {
                 e.preventDefault();
@@ -79,8 +79,8 @@ const Profile = () => {
             <span
               className={
                 openTab === 2
-                  ? "py-3 px-3 sm:px-6 sm:py-6 text-center border-2-r border-2-l  flex flex-row flex-1  items-center justify-center  cursor-pointer  bg-gray-200 border-l-2 border-r-2 border-b-2 border-gray-300 rounded-t gray text-gray-800"
-                  : "py-3 px-3 sm:px-6 sm:py-6 text-center border-2-r border-2-l border-gray-200 flex flex-row flex-1  items-center justify-center  cursor-pointer  text-gray-600"
+                  ? "py-3 px-3 sm:px-6 sm:py-6 text-center border-2-r border-2-l  flex flex-row flex-1  items-center justify-center  cursor-pointer  bg-gray-200 border-l-2 border-r-2 border-b-2 border-gray-300 rounded-t gray text-gray-800 font-bold"
+                  : "py-3 px-3 sm:px-6 sm:py-6 text-center border-2-r border-2-l border-gray-200 flex flex-row flex-1  items-center justify-center  cursor-pointer  text-gray-600 font-semibold"
               }
               onClick={(e) => {
                 e.preventDefault();

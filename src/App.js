@@ -31,11 +31,11 @@ function App() {
       <Hero />
       <AboutUs/>
       <Profile/>
+      <Vajra/>
+      <BigData/>
       <AiAssisted />
       <NewsAndEvent />
       <VisionAndMission />
-      <Vajra/>
-      <BigData/>
       <ContactUs/>
       <Footer/>
     </div>
