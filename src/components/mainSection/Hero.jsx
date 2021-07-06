@@ -1,30 +1,36 @@
 import React from "react";
 const Hero = () => {
   return (
-    <section class="text-gray-600 body-font">
-      <div class="container mx-auto flex px-5  md:flex-row flex-col items-center">
-        <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+    <section
+      class="cover bg-blue-teal-gradient relative bg-blue-600 px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 overflow-hidden pt-48  md:py-24  flex
+      items-center"
+    >
+      {/* <div class="h-full absolute top-0 left-0 z-0">
           <img
-            class="object-cover object-center rounded"
-            src={process.env.PUBLIC_URL + "./assets/bioheaven.png"}
-            alt="bioheaven360"
+            src="images/cover-bg.jpeg"
+            alt=""
+            class="w-full h-full object-cover opacity-20"
           />
-        </div>
-        <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
-          <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
-            Data driven Risk Prediction
+        </div> */}
+
+      <div class="lg:w-3/4 xl:w-2/4 relative z-10 h-100 lg:mt-16">
+        <div>
+          <h1 class="text-white text-4xl md:text-2xl xl:text-3xl font-bold leading-tight">
+            Bioheaven is revolutionising the data driven risk prediction for
+            diseases.
           </h1>
-          <h3 class="text-2xl mb-8 text-gray-800">
-            <p className="text-3xl">
-              Bioheaven is revolutionising the data driven risk prediction for
-              diseases.
-            </p>
-            <p>
-              We build the AI-powered Genomics Diagnostics tools to provide
-              early diagnosis or risk predictions of diseases, providing timely
-              intervention and the opportunity to prevent the disease.
-            </p>
-          </h3>
+          <p class="text-blue-100 text-sm md:text-xl leading-snug mt-4">
+            We build the AI-powered Genomics Diagnostics tools to provide early
+            diagnosis or risk predictions of diseases, providing timely
+            intervention and the opportunity to prevent the disease.
+          </p>
+
+          {/* <a
+            href="/"
+            class="px-8 py-4 bg-teal-500 text-white rounded inline-block mt-8 font-semibold"
+          >
+            Book Appointment
+          </a> */}
         </div>
       </div>
     </section>

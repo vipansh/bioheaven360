@@ -53,16 +53,16 @@ const AboutUs = () => {
   ];
 
   return (
-    <section class="text-gray-600 body-font">
+    <section class=" text-white body-font">
       <div class="container px-5 py-24 mx-auto">
-        <div class="flex flex-wrap w-full mb-20">
-          <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
-            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">
-              Out Team
+        <div class="flex flex-wrap w-full mb-20  md:w-1/2 mx-auto">
+          <div class="lg:w-1/2 w-full mb-6 lg:mb-0 ">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 ">
+              Our Team
             </h1>
             <div class="h-1 w-20 bg-indigo-500 rounded"></div>
           </div>
-          <p class="lg:w-1/2 w-full leading-relaxed text-gray-500">
+          <p class="lg:w-1/2 w-full leading-relaxed   ">
             <ul>
               <li> RESEARCH AND DEVELOPMENT ORGANIZATION</li>
               <li>
@@ -73,23 +73,22 @@ const AboutUs = () => {
             </ul>
           </p>
         </div>
-        <div class="grid grid-cols-2  md:grid-cols-3 lg:grid-cols-4 md:gap-4 gap-1">
+        <div class="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-4 md:gap-4 gap-1">
           {team.map((data) => {
             return (
-              <div class="p-2 flex justify-center  " key={data.id} >
-                <div class="bg-gray-100 p-6 rounded-lg">
+              <div class="p-2  w-full  text-gray-800">
+                <div class="h-full flex items-center bg-gray-100 border-gray-200 border p-4 rounded-lg">
                   <img
-                    class="md:h-40 w-32 rounded md:w-full object-cover object-center mb-6 h-32"
-                    src="https://dummyimage.com/720x400"
-                    alt="content"
+                    alt="team"
+                    class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
+                    src="https://dummyimage.com/80x80"
                   />
-                  <h2 class="md:text-lg text-sm text-gray-900 font-medium title-font ">
-                    {data.name}
-                  </h2>
-                  <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font mb-4">
-                    {data.position}
-                  </h3>
-                  
+                  <div class="flex-grow">
+                    <h2 class=" title-font font-medium">
+                      {data.name}
+                    </h2>
+                    <p class="">{data.position}</p>
+                  </div>
                 </div>
               </div>
             );

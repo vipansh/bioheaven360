@@ -21,7 +21,7 @@ function App() {
     AOS.refresh();
   }, []);;
   return (
-    <div className="bg-gray-300"
+    <div className="bg-blue-600"
       data-aos="fade-left"
       data-aos-anchor="#example-anchor"
       data-aos-offset="500"
@@ -29,8 +29,8 @@ function App() {
     >
       <Navbar />
       <Hero />
-      <AboutUs/>
       <Profile/>
+      <AboutUs/>
       <Vajra/>
       <BigData/>
       <AiAssisted />

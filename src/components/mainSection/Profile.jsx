@@ -6,27 +6,27 @@ const Profile = () => {
     {
       title: "MOLECULAR TESTING KITS",
       about: "about",
-      link: "",
+      divnk: "",
     },
     {
       title: "RTPCR; PCR; Sequencing Assay",
       about: "about",
-      link: "",
+      divnk: "",
     },
     {
       title: "HISTOPATHOLOGY",
       about: "about",
-      link: "",
+      divnk: "",
     },
     {
       title: "CONSUMABLE –GLASS/ PLASTICS",
       about: "about",
-      link: "",
+      divnk: "",
     },
     {
       title: "OTHER CHEMICALS, REAGENTS AND MEDIA ",
       about: "about",
-      link: "",
+      divnk: "",
     },
   ];
 
@@ -34,137 +34,151 @@ const Profile = () => {
     {
       title: "VAJRA- THE OSTEO AI (DBT FUNDED)",
       about: "about",
-      link: "",
+      divnk: "",
     },
     {
       title: "GENETIC MARKERS ",
       about: "about",
-      link: "",
+      divnk: "",
     },
     {
       title: "VACCINE (PATENTED)",
       about: "about",
-      link: "",
+      divnk: "",
     },
     {
       title: "EYE DEVICE ",
       about: "about",
-      link: "",
+      divnk: "",
     },
   ];
 
   const [openTab, setOpenTab] = React.useState(1);
   return (
-    <section className="container mx-auto rounded bg-gray-300">
-      <div className="flex flex-wrap p-4 ">
-        <TitleBar title="CORPORATE PROFILE- HEALTH "></TitleBar>
-        <div className="w-full">
-          <div className="flex justify-between">
-            <span
-              className={
-                openTab === 1
-                  ? "py-3 px-3 sm:px-6 sm:py-6 text-center border-2-r border-2-l border-gray-200 flex flex-row flex-1  items-center justify-center  cursor-pointer  bg-gray-200 border-l-2 border-r-2 border-t-2  rounded-t gray text-gray-800 font-bold"
-                  : "py-3 px-3 sm:px-6 sm:py-6 text-center border-2-r border-2-l border-gray-200 flex flex-row flex-1  items-center justify-center  cursor-pointer  text-gray-600 font-semibold"
-              }
-              onClick={(e) => {
-                e.preventDefault();
-                setOpenTab(1);
-              }}
-              data-toggle="tab"
-              href="#link1"
-              role="tablist"
-            >
-              MANUFACTURING KITS AND DEVICES
-            </span>
-            <span
-              className={
-                openTab === 2
-                  ? "py-3 px-3 sm:px-6 sm:py-6 text-center border-2-r border-2-l  flex flex-row flex-1  items-center justify-center  cursor-pointer  bg-gray-200 border-l-2 border-r-2 border-b-2 border-gray-300 rounded-t gray text-gray-800 font-bold"
-                  : "py-3 px-3 sm:px-6 sm:py-6 text-center border-2-r border-2-l border-gray-200 flex flex-row flex-1  items-center justify-center  cursor-pointer  text-gray-600 font-semibold"
-              }
-              onClick={(e) => {
-                e.preventDefault();
-                setOpenTab(2);
-              }}
-              data-toggle="tab"
-              href="#link2"
-              role="tablist"
-            >
-              INNOVATION AND RESEARCH
-            </span>
-          </div>
+    <section className="container mx-auto rounded bg-white pt-8 md:pt-0">
+      <div className="lg:mt-12 lg:p-12">
+        <div class="md:w-1/2 mx-auto">
+          <h2 className="text-center font-semibold md:text-4xl text-2xl text-gray-800 my-2">
+            Products
+          </h2>
+          <p className="text-center font-semibold md:text-2xl text-xs text-gray-700">
+            Our aim is to make it quick and easy for you to access your
+            favourite websites. Your bookmarks sync between your devices so you
+            can access them on the go.
+          </p>
+        </div>
 
-          <div className="relative min-w-0 break-words py-3 px-3 sm:px-6 sm:py-6 text-center border-2-r border-2-l flex flex-row flex-1  items-center justify-center  cursor-pointer  bg-gray-200 border-l-2 border-r-2 border-b-2 border-gray-300 rounded-t gray text-gray-800w-full mb-6 -mt-1 shadow-lg rounded">
-            <div className="px-4 py-5 flex  rounded-md">
-              <div className="tab-content tab-space">
-                <div className={openTab === 1 ? "block" : "hidden"} id="link1">
-                  <div className="grid grid-cols-1  md:grid-cols-3 lg:grid-cols-4 md:gap-4 gap-1">
-                    {kits.map((data, index) => {
-                      return (
-                        <div
-                          key={index}
-                          class=" my-2 border-2 border-gray-200 border-opacity-60 bg-white rounded-md p-4  "
+        <div class="md:w-1/2 grid grid-cols-3 gap-4 mx-auto items-center my-4">
+          <div
+            onClick={() => setOpenTab(1)}
+            class={`text-lg text-center cursor-pointer  ${
+              openTab === 1
+                ? "text-gray-800 p-2 border-b-4 border-blue-500 font-semibold rounded"
+                : "text-gray-600 p-2 "
+            }`}
+          >
+            Simple Bookmarking
+          </div>
+          <div
+            onClick={() => setOpenTab(2)}
+            class={`text-lg text-center cursor-pointer  ${
+              openTab === 2
+                ? "text-gray-800 p-2 border-b-4 border-blue-500 font-semibold rounded"
+                : "text-gray-600 p-2 "
+            }`}
+          >
+            Speedy Searching
+          </div>
+          <div
+            onClick={() => setOpenTab(3)}
+            class={`text-lg text-center cursor-pointer  ${
+              openTab === 3
+                ? "text-gray-800 p-2 border-b-4 border-blue-500 font-semibold rounded"
+                : "text-gray-600 p-2 "
+            }`}
+          >
+            Easy Sharing
+          </div>
+        </div>
+        <div class=" md:w-3/4 grid grid-cols-3 gap-4 mx-auto  my-4 shadow border ">
+          <div class="hidden md:block">
+            <img
+              class=" h-96 rounded w-full object-cover object-center  "
+              src="https://dummyimage.com/720x400"
+              alt="content"
+            />
+          </div>
+          <div className="col-span-3 md:col-span-2  overflow-x-auto    h-96 p-4  ">
+            {openTab === 1 &&
+              kits.map((data) => {
+                return (
+                  <div className="shadow border my-2  p-3 rounded">
+                    <div class="bg-white  ">
+                      <div class="mt-6">
+                        <p class="text-lg font-bold tracking-wide text-gray-800 mb-2">
+                          {data.title}
+                        </p>
+                        <p class="text-sm text-gray-600 font-hairline">
+                          {data.about} Lorem ipsum dolor sit amet, consectetur
+                          adipiscing elit.
+                        </p>
+                      </div>
+                      <a
+                        href="/"
+                        class="text-indigo-500  items-center mx-2 flex justify-center "
+                      >
+                        Learn More
+                        <svg
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          class="w-4 h-4 ml-2"
+                          viewBox="0 0 24 24"
                         >
-                          <div class="text-lg sm:text-xl text-gray-900 font-medium title-font ">
-                            {data.title}
-                            <a
-                              href="/"
-                              class="text-indigo-500  items-center mx-2 flex justify-center "
-                            >
-                              Learn More
-                              <svg
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                class="w-4 h-4 ml-2"
-                                viewBox="0 0 24 24"
-                              >
-                                <path d="M5 12h14M12 5l7 7-7 7"></path>
-                              </svg>
-                            </a>
-                          </div>
-                        </div>
-                      );
-                    })}
+                          <path d="M5 12h14M12 5l7 7-7 7"></path>
+                        </svg>
+                      </a>
+                    </div>
                   </div>
-                </div>
-                <div className={openTab === 2 ? "block" : "hidden"} id="link2">
-                <div className="grid grid-cols-1  md:grid-cols-3 lg:grid-cols-4 md:gap-4 gap-1">
-                {reserch.map((data, index) => {
-                      return (
-                        <div
-                          key={index}
-                          class=" my-2 border-2 border-gray-200 border-opacity-60 bg-white rounded-md p-4  "
+                );
+              })}
+            {openTab === 2 &&
+              reserch.map((data) => {
+                return (
+                  <div className="shadow border my-2  p-3 rounded">
+                    <div class="bg-white  ">
+                      <div class="mt-6">
+                        <p class="text-lg font-bold tracking-wide text-gray-800 mb-2">
+                          {data.title}
+                        </p>
+                        <p class="text-sm text-gray-600 font-hairline">
+                          {data.about} Lorem ipsum dolor sit amet, consectetur
+                          adipiscing elit.
+                        </p>
+                      </div>
+                      <a
+                        href="/"
+                        class="text-indigo-500  items-center mx-2 flex justify-center "
+                      >
+                        Learn More
+                        <svg
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          class="w-4 h-4 ml-2"
+                          viewBox="0 0 24 24"
                         >
-                          <div class="text-lg sm:text-xl text-gray-900 font-medium title-font ">
-                            {data.title}
-                            <a
-                              href="/"
-                              class="text-indigo-500  items-center mx-2 flex justify-center "
-                            >
-                              Learn More
-                              <svg
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                class="w-4 h-4 ml-2"
-                                viewBox="0 0 24 24"
-                              >
-                                <path d="M5 12h14M12 5l7 7-7 7"></path>
-                              </svg>
-                            </a>
-                          </div>
-                        </div>
-                      );
-                    })}
+                          <path d="M5 12h14M12 5l7 7-7 7"></path>
+                        </svg>
+                      </a>
+                    </div>
                   </div>
-                </div>
-              </div>
-            </div>
+                );
+              })}
           </div>
         </div>
       </div>
