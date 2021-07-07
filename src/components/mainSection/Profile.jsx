@@ -61,7 +61,7 @@ const Profile = () => {
           <h2 className="text-center font-semibold md:text-4xl text-2xl text-gray-800 my-2">
             Products
           </h2>
-          <p className="text-center font-semibold md:text-2xl text-xs text-gray-700">
+          <p className="text-center font-medium md:text-2xl text-xs text-gray-700">
             Our aim is to make it quick and easy for you to access your
             favourite websites. Your bookmarks sync between your devices so you
             can access them on the go.
@@ -114,32 +114,32 @@ const Profile = () => {
                 return (
                   <div className="shadow border my-2  p-3 rounded">
                     <div class="bg-white  ">
-                      <div class="mt-6">
+                      <div class="m-2">
                         <p class="text-lg font-bold tracking-wide text-gray-800 mb-2">
                           {data.title}
                         </p>
                         <p class="text-sm text-gray-600 font-hairline">
                           {data.about} Lorem ipsum dolor sit amet, consectetur
                           adipiscing elit.
+                          <a
+                            href="/"
+                            class="text-indigo-500  items-center mx-2 inline-flex justify-end "
+                          >
+                            Learn More
+                            <svg
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              class="w-4 h-4 ml-2"
+                              viewBox="0 0 24 24"
+                            >
+                              <path d="M5 12h14M12 5l7 7-7 7"></path>
+                            </svg>
+                          </a>
                         </p>
                       </div>
-                      <a
-                        href="/"
-                        class="text-indigo-500  items-center mx-2 flex justify-center "
-                      >
-                        Learn More
-                        <svg
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          class="w-4 h-4 ml-2"
-                          viewBox="0 0 24 24"
-                        >
-                          <path d="M5 12h14M12 5l7 7-7 7"></path>
-                        </svg>
-                      </a>
                     </div>
                   </div>
                 );
@@ -149,32 +149,32 @@ const Profile = () => {
                 return (
                   <div className="shadow border my-2  p-3 rounded">
                     <div class="bg-white  ">
-                      <div class="mt-6">
+                      <div class="m-2">
                         <p class="text-lg font-bold tracking-wide text-gray-800 mb-2">
                           {data.title}
                         </p>
                         <p class="text-sm text-gray-600 font-hairline">
                           {data.about} Lorem ipsum dolor sit amet, consectetur
                           adipiscing elit.
+                          <a
+                            href="/"
+                            class="text-indigo-500  items-center mx-2 inline-flex justify-end "
+                          >
+                            Learn More
+                            <svg
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              class="w-4 h-4 ml-2"
+                              viewBox="0 0 24 24"
+                            >
+                              <path d="M5 12h14M12 5l7 7-7 7"></path>
+                            </svg>
+                          </a>
                         </p>
                       </div>
-                      <a
-                        href="/"
-                        class="text-indigo-500  items-center mx-2 flex justify-center "
-                      >
-                        Learn More
-                        <svg
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          class="w-4 h-4 ml-2"
-                          viewBox="0 0 24 24"
-                        >
-                          <path d="M5 12h14M12 5l7 7-7 7"></path>
-                        </svg>
-                      </a>
                     </div>
                   </div>
                 );

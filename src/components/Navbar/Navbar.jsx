@@ -4,13 +4,13 @@ export default function Navbar({ fixed }) {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
   return (
     <>
-      <header class="absolute top-0 left-0 w-full z-50 px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64">
+      <header class="absolute bg-white top-0 left-0 w-full z-50 px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64">
         <div
           class="hidden lg:flex justify-between items-center py-2 border-b text-sm py-3"
           style={{ borderColor: "rgba(255,255,255,.25)" }}
         >
           <div class="">
-            <ul class="flex text-white">
+            <ul class="flex text-gray-800">
               <li>
                 <div class="flex items-center">
                   <svg
@@ -137,11 +137,11 @@ export default function Navbar({ fixed }) {
             class={` md:block w-full md:w-auto ${navbarOpen ? "hidden" : ""}`}
             id="menu"
           >
-            <nav class="w-full bg-white md:bg-transparent rounded shadow-lg px-6 py-4 mt-4 text-center md:p-0 md:mt-0 md:shadow-none">
+            <nav class="w-full bg-white text-gray-800 md:bg-transparent rounded shadow-lg px-6 py-4 mt-4 text-center md:p-0 md:mt-0 md:shadow-none">
               <ul class="md:flex items-center">
                 <li>
                   <a
-                    class="py-2 inline-block md:text-white md:hidden lg:block font-semibold"
+                    class="py-2 inline-block  md:hidden lg:block font-semibold"
                     href="/"
                   >
                     Home
@@ -149,7 +149,7 @@ export default function Navbar({ fixed }) {
                 </li>
                 <li class="md:ml-4">
                   <a
-                    class="py-2 inline-block md:text-white md:px-2 font-semibold"
+                    class="py-2 inline-block  md:px-2 font-semibold"
                     href="/"
                   >
                     Products
@@ -157,7 +157,7 @@ export default function Navbar({ fixed }) {
                 </li>
                 <li class="md:ml-4">
                   <a
-                    class="py-2 inline-block md:text-white md:px-2 font-semibold"
+                    class="py-2 inline-block  md:px-2 font-semibold"
                     href="/"
                   >
                     Testimonials
@@ -165,7 +165,7 @@ export default function Navbar({ fixed }) {
                 </li>
                 <li class="md:ml-4 md:hidden lg:block">
                   <a
-                    class="py-2 inline-block md:text-white md:px-2 font-semibold"
+                    class="py-2 inline-block  md:px-2 font-semibold"
                     href="/"
                   >
                     Media
@@ -173,7 +173,7 @@ export default function Navbar({ fixed }) {
                 </li>
                 <li class="md:ml-4">
                   <a
-                    class="py-2 inline-block md:text-white md:px-2 font-semibold"
+                    class="py-2 inline-block  md:px-2 font-semibold"
                     href="/"
                   >
                     About us
@@ -181,7 +181,7 @@ export default function Navbar({ fixed }) {
                 </li>
                 {/* <li class="md:ml-6 mt-3 md:mt-0">
                   <a
-                    class="inline-block font-semibold px-4 py-2 text-white bg-blue-600 md:bg-transparent md:text-white border border-white rounded"
+                    class="inline-block font-semibold px-4 py-2 text-white bg-blue-600 md:bg-transparent  border border-white rounded"
                     href="/dentalpro/book-appointment"
                   >
                     Book Appointment
